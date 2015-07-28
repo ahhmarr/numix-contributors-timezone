@@ -4,7 +4,7 @@
 	$(function(){
 		$.get('people.json',function(resp)
 		{
-			var json=$.parseJSON(resp);
+			var json=(typeof resp !=='object')?JSON.parse(resp):resp;
 			$("#container").html(fetchDateTime(json))
 
 		})
