@@ -5,9 +5,8 @@
 		$.get('people.json',function(resp)
 		{
 			var json=(typeof resp !=='object')?JSON.parse(resp):resp;
-			$("#container").html(fetchDateTime(json))
-
-		})
+			$("#container").html(fetchDateTime(json));
+		});
 	});
 	var fetchTimeZone=function(city,callback)
 	{
@@ -45,7 +44,7 @@
 					a.image=resp.avatar_url;
 					a.url=resp.html_url;
 					$("#container").append(print([a]));
-				})
+				});
 			});
 		});
 	};
@@ -92,6 +91,6 @@ var print=function(obj)
 			var newTime=moment().tz(zone).format('MM-DD-YYYY hh:mm:ss');
 			th.html(newTime);
 		});
-	},1000)
+	},1000);
 
 })(window);
