@@ -36,7 +36,7 @@
 		{
 			fetchTimeZone(a.city,function(city,timeZone)
 			{
-				a.tz=moment().tz(timeZone).format('MM-DD-YYYY hh:mm:ss');
+				a.tz=moment().tz(timeZone).format('MM-DD-YYYY hh:mm');
 				a.timezone=timeZone;
 				$.get('https://api.github.com/users/'+a.ghuser+'?access_token=e67ea19adddc71d25778fc28344e10e53c04b22f',function(resp)
 				{
@@ -88,9 +88,9 @@ var print=function(obj)
 		{
 			var th=$(this);
 			var zone=th.data('locale');
-			var newTime=moment().tz(zone).format('MM-DD-YYYY hh:mm:ss');
+			var newTime=moment().tz(zone).format('MM-DD-YYYY hh:mm');
 			th.html(newTime);
 		});
-	},2000);
+	},60000);
 
 })(window);
