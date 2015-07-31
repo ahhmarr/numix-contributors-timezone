@@ -55,7 +55,7 @@ var print=function(obj)
 		var html=[];
 		obj.forEach(function(a,b)
 		{
-			console.log(a);
+			// console.log(a);
 			var h=([
 				'<div class="user">',
 					'<div>',
