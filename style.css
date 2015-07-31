@@ -9,7 +9,7 @@ body,html,#container{
     background-color: #E6E6E6;
     height:95%;
     width:97%;
-    font-family:'Poiret One', cursive;
+    font-family: 'Nunito', sans-serif;
 }
 .user{
     width:15%;
@@ -18,13 +18,14 @@ body,html,#container{
     margin-left:1%;
     margin-bottom: 1%;
     background-color: #fff;
+    color:#646464;
 }
 .user div{
     padding:5px;
     text-align: center;
 }
 .user div:nth-child(1){
-    margin-top: 20px;
+   
 }
 .user div:nth-child(1) img{
     height:80px;
