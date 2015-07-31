@@ -38,7 +38,7 @@
 			{
 				a.tz=moment().tz(timeZone).format('MM-DD-YYYY hh:mm:ss');
 				a.timezone=timeZone;
-				$.get('https://api.github.com/users/'+a.ghuser,function(resp)
+				$.get('https://api.github.com/users/'+a.ghuser+'?access_token=e67ea19adddc71d25778fc28344e10e53c04b22f',function(resp)
 				{
 					a.name=resp.name||a.name;
 					a.image=resp.avatar_url;
@@ -91,6 +91,6 @@ var print=function(obj)
 			var newTime=moment().tz(zone).format('MM-DD-YYYY hh:mm:ss');
 			th.html(newTime);
 		});
-	},1000);
+	},2000);
 
 })(window);
