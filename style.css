@@ -13,18 +13,19 @@ body,html,#container{
 }
 .user{
     width:15%;
+    height:200px;
     float:left;
-
     margin-left:1%;
     margin-bottom: 1%;
+    background-color: #fff;
 }
 .user div{
-    background-color: #fff;
     padding:5px;
     text-align: center;
-    box-shadow: 1px 2px #ccc;
 }
-
+.user div:nth-child(1){
+    margin-top: 20px;
+}
 .user div:nth-child(1) img{
     height:80px;
     border-radius: 300px;
@@ -40,8 +41,11 @@ body,html,#container{
        height:60px;
     }
 }
-@media screen and (max-width:505px){
+@media screen and (max-width:600px){
     .user{
         width:100%;
+    }
+    .user div:nth-child(1) img{
+        height:90px;
     }
 }
