@@ -126,7 +126,7 @@ var print=function()
 		{
 			var th=$(this);
 			var zone=th.data('locale');
-			var newTime=moment().tz(zone).format('MM-DD-YYYY hh:mm dddd');
+			var newTime=moment().tz(zone).format('MM-DD-YYYY hh:mm A');
 			th.html(newTime);
 		});
 	},60000);
