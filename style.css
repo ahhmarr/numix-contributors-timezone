@@ -11,6 +11,13 @@ body,html,#container{
     width:97%;
     font-family: 'Nunito', sans-serif;
 }
+h2{
+    text-align: center;
+    color:#646464;
+    text-transform: capitalize;
+    margin-bottom: 7%;
+}
+
 .user{
     width:15%;
     height:200px;
