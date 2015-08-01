@@ -21,7 +21,8 @@
 			fetchTimeZone(a.city,function(city,timeObj)
 			{
 
-				a.tz=moment().tz(timeObj.timeZoneId).format('MM-DD-YYYY hh:mm');
+				// a.tz=moment().tz(timeObj.timeZoneId).format('MM-DD-YYYY hh:mm dddd');
+				a.tz=moment().tz(timeObj.timeZoneId).format('MM-DD-YYYY hh:mm A');
 				a.timezone=timeObj.timeZoneId;
 				a.zone=moment().tz(timeObj.timeZoneId).format('z');
 				$.get('https://api.github.com/users/'+a.ghuser+'?access_token=e67ea19adddc71d25778fc28344e10e53c04b22f',function(resp)
@@ -71,7 +72,7 @@
 var sort=function()
 {
  var sorted=[];
- console.log('sorting started');
+ // console.log('sorting started');
  people=people.sort(function(a,b)
  {
  	/*console.log(a.timeObj.rawOffset+' a');
@@ -87,11 +88,7 @@ var print=function()
 	{
 		
 		var html=[];
-		console.log('before sort');
-		console.log(people);
 		sort();
-		console.log('after sort');
-		console.log(people);
 		people.forEach(function(a,b)
 		{
 			// console.log(a);
@@ -129,7 +126,7 @@ var print=function()
 		{
 			var th=$(this);
 			var zone=th.data('locale');
-			var newTime=moment().tz(zone).format('MM-DD-YYYY hh:mm');
+			var newTime=moment().tz(zone).format('MM-DD-YYYY hh:mm dddd');
 			th.html(newTime);
 		});
 	},60000);
